@@ -5,42 +5,27 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-informational.svg)](LICENSE)
 
 A curated Extension Pack for **AL / Microsoft Dynamics 365 Business Central**
-development. It is the companion pack to
+development. Companion to
 [AL Buddy](https://marketplace.visualstudio.com/items?itemName=FredericVercaemst.albuddy).
 
-> **Status: MVP.** The pack bundles exactly one extension today - the official
-> AL Language extension - and lists the rest as an opt-in menu below. Later
-> releases may promote more of them into the pack.
+Installing this pack installs **every extension listed below**. Don't want one
+of them? Uninstall it from the Extensions view - the pack won't put it back.
+The list mirrors the tiers in [cursor-extensions.md](cursor-extensions.md),
+which also records the versions each entry was last checked against.
 
-## What this pack installs
-
-| Extension | Why |
-| --- | --- |
-| [AL Language](https://marketplace.visualstudio.com/items?itemName=ms-dynamics-smb.al) (`ms-dynamics-smb.al`) | The official Microsoft AL compiler and language server. Everything else builds on it. |
-
-## Also recommended
-
-These are **not** installed by the pack - it is a menu, not a mandate. Add the
-ones you want from the Extensions view, or:
-
-```bash
-code --install-extension <id>
-```
-
-### AL
+## AL - essential
 
 | Extension | ID |
 | --- | --- |
+| AL Language (official Microsoft compiler + language server) | `ms-dynamics-smb.al` |
 | AZ AL Dev Tools / Code Outline | `andrzejzwierzchowski.al-code-outline` |
 | AL Code Actions | `davidfeldhoff.al-codeactions` |
 | Object ID Ninja | `vjeko.vjeko-al-objid` |
 | AL Pocket Tools | `teddyherryanto.al-pocket-tools` |
 | AlCops | `arthurvdv.alcops` |
 | CRS AL Language Extension | `waldo.crs-al-language-extension` |
-| AL Prettier | `alexander-drogin.al-prettier-vscode` |
-| XLIFF Sync | `rvanbekkum.xliff-sync` |
 
-### Editor / general
+## Editor - essential
 
 | Extension | ID |
 | --- | --- |
@@ -48,12 +33,27 @@ code --install-extension <id>
 | Reload | `natqe.reload` |
 | Code Spell Checker | `streetsidesoftware.code-spell-checker` |
 | Change Case | `wmaurer.change-case` |
-| vscode-icons | `vscode-icons-team.vscode-icons` |
 | Partial Diff | `ryu1kn.partial-diff` |
+| Create GUID | `nwallace.createguid` |
+
+## AL - extras
+
+| Extension | ID |
+| --- | --- |
+| AL Prettier | `alexander-drogin.al-prettier-vscode` |
+| XLIFF Sync | `rvanbekkum.xliff-sync` |
+
+## Editor - extras
+
+| Extension | ID |
+| --- | --- |
+| vscode-icons | `vscode-icons-team.vscode-icons` |
 | Sort Lines | `tyriar.sort-lines` |
 | Remove Empty Lines | `usernamehw.remove-empty-lines` |
 
-### Optional / personal taste
+## Optional
+
+Broader tooling and personal-taste picks. Uninstall any you don't use.
 
 | Extension | ID |
 | --- | --- |
@@ -68,14 +68,11 @@ code --install-extension <id>
 | Format JSON | `clemenspeters.format-json` |
 | GitHub Actions | `github.vscode-github-actions` |
 
-The full inventory, with the versions this list was last checked against, is in
-[cursor-extensions.md](cursor-extensions.md).
-
 ## Requirements
 
 - VS Code `1.95.0` or newer.
 - Installs from the **Visual Studio Marketplace**. On VSCodium / Cursor /
-  Windsurf (Open VSX) some of the listed IDs are not available.
+  Windsurf (Open VSX) some of these IDs are not available.
 
 ## Installation
 

@@ -1,7 +1,7 @@
 {
   "name": "albuddy-pack",
   "displayName": "AL Buddy Pack",
-  "description": "A curated pack for AL / Business Central development, anchored by the official AL Language extension.",
+  "description": "A curated Extension Pack of AL / Business Central extensions for VS Code.",
   "version": "0.0.1",
   "publisher": "FredericVercaemst",
   "license": "MIT",
@@ -33,7 +33,38 @@
     "theme": "dark"
   },
   "extensionPack": [
-    "ms-dynamics-smb.al"
+    "ms-dynamics-smb.al",
+    "andrzejzwierzchowski.al-code-outline",
+    "davidfeldhoff.al-codeactions",
+    "vjeko.vjeko-al-objid",
+    "teddyherryanto.al-pocket-tools",
+    "arthurvdv.alcops",
+    "waldo.crs-al-language-extension",
+
+    "chunsen.bracket-select",
+    "natqe.reload",
+    "streetsidesoftware.code-spell-checker",
+    "wmaurer.change-case",
+    "ryu1kn.partial-diff",
+    "nwallace.createguid",
+
+    "alexander-drogin.al-prettier-vscode",
+    "rvanbekkum.xliff-sync",
+
+    "vscode-icons-team.vscode-icons",
+    "tyriar.sort-lines",
+    "usernamehw.remove-empty-lines",
+
+    "donjayamanne.githistory",
+    "eamodio.gitlens",
+    "anthropic.claude-code",
+    "github.vscode-pull-request-github",
+    "ms-vscode.powershell",
+    "streetsidesoftware.code-spell-checker-dutch",
+    "yzhang.markdown-all-in-one",
+    "albymor.increment-selection",
+    "clemenspeters.format-json",
+    "github.vscode-github-actions"
   ],
   "scripts": {
     "build-icons": "powershell -ExecutionPolicy Bypass -File icons/build-icons.ps1"

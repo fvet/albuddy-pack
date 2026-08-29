@@ -24,7 +24,7 @@
 | jamespearson.al-test-runner | AL Test Runner | James Pearson | Test runner for AL tests for Business Central |
 | nabsolutions.nab-al-tools | NAB AL Tools | NAB Solutions AB | Development and translation management for AL / BC |
 
-## COULD - DEV 
+## COULD - DEV
 
 | vscode-icons-team.vscode-icons | 12.19.0 |
 | ryu1kn.partial-diff | 1.4.6 |
@@ -32,7 +32,7 @@
 | usernamehw.remove-empty-lines | 1.0.1 |
 | nwallace.createguid | Create GUID | nwallace | Command that creates a new GUID |
 
-## OPTIONAL 
+## OPTIONAL
 
 | donjayamanne.githistory | 0.6.20 |
 | eamodio.gitlens | 19.0.1 |
@@ -46,8 +46,32 @@
 | github.vscode-github-actions | 0.32.3 |
 | wbrakowski.al-navigator | AL Navigator | Waldemar Brakowski | Variables, parameters, launch.json IDs, navigation shortcuts |
 
+---
 
+FernandoArtigasAlfonso.al-copilot-skills-collection
+DSaladin.al-companion
+JavierArmestoGonzalez.al-development-collection
+theframework.acdc
 
+## Extension packs � not listed above
 
+| Extension ID | Notes |
+|--------------|-------|
+| `hediet.vscode-drawio` | Diagrams inside VS Code |
+| `mhutchie.git-graph` | Git graph view with actions from the graph |
+| `shd101wyy.markdown-preview-enhanced` | Better preview panel for Markdown files |
+| `vsls-contrib.codetour` | Record and playback guided code tours |
+| `wenfangdu.snippet-generator` | Easily create snippets for VS Code |
+| `evidi.evidi-al-updateappversion` | Evidi AL Update App Version |
+| `kruemelkatze.vscode-dashboard` | VS Code dashboard |
+| `usernamehw.commands` | Commands utility |
+| `edyspider.allaunchmanagement` | AL Launch Management |
+| `heaths.vscode-guid` | Insert GUID |
+| `daniel-nt.al-translation-center` | AL Translation Center |
+| `kruemelkatze.vscode-dashboard` | VS Code dashboard |
+| `vjeko.al-pragma-explorer` | AL Pragma Explorer |
 
-
+| `bierner.docs-view` | Docs View |
+| `DavidAnson.vscode-markdownlint` | Markdownlint |
+| `slhsxcmy.vscode-double-line-numbers` | Double Line Numbers |
+| `vdevmt.al-advanced-tools-suite` | Find in Dependencies, Translation Manager, Workspace Explorer, launch.json manager, and more |

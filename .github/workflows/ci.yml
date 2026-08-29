@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      # Proves the .vsix packages cleanly - the same step the release runs.
+      # An Extension Pack has no build or test; packaging is the only gate.
+      - name: Package
+        run: npx --yes @vscode/vsce package --out albuddy-pack.vsix
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: albuddy-pack-vsix
+          path: albuddy-pack.vsix
+          retention-days: 7

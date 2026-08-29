@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # No npm manifest is committed - @vscode/vsce runs via npx - so only the
+  # workflow actions need watching.
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    groups:
+      github-actions:
+        patterns:
+          - "*"

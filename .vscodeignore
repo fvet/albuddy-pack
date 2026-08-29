@@ -1,0 +1,12 @@
+.github/**
+.vscode/**
+.git/**
+.gitignore
+.gitattributes
+icons/build-icons.ps1
+icons/logo.svg
+icons/icon256.png
+DEVELOPMENT.md
+CLAUDE.md
+backlog.md
+cursor-extensions.md

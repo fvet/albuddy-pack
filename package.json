@@ -1,0 +1,41 @@
+{
+  "name": "albuddy-pack",
+  "displayName": "AL Buddy Pack",
+  "description": "A curated pack for AL / Business Central development, anchored by the official AL Language extension.",
+  "version": "0.0.1",
+  "publisher": "FredericVercaemst",
+  "license": "MIT",
+  "icon": "icons/icon128.png",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fvet/albuddy-pack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fvet/albuddy-pack/issues"
+  },
+  "homepage": "https://github.com/fvet/albuddy-pack#readme",
+  "categories": [
+    "Extension Packs"
+  ],
+  "keywords": [
+    "al",
+    "business central",
+    "dynamics 365",
+    "bc",
+    "erp",
+    "extension pack"
+  ],
+  "galleryBanner": {
+    "color": "#505C6D",
+    "theme": "dark"
+  },
+  "extensionPack": [
+    "ms-dynamics-smb.al"
+  ],
+  "scripts": {
+    "build-icons": "powershell -ExecutionPolicy Bypass -File icons/build-icons.ps1"
+  }
+}

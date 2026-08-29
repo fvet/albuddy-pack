@@ -13,6 +13,12 @@ the project aims to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+### Changed
+
+- Swapped **Create GUID** (`nwallace.createguid`) for **Insert GUID**
+  (`heaths.vscode-guid`), which inserts the GUID at the cursor or over the
+  selection and offers several formats and casing options.
+
 <!-- --8<-- [start:released] -->
 
 ## 0.1.0 — 2026-08-29

@@ -13,7 +13,7 @@ plus the docs.
 | `backlog.md` | Unsized ideas + an **Extensions to review** table of candidates not yet bundled. |
 | `icons/logo.svg` | Brand mark (shared with AL Buddy). `build-icons.ps1` rasterises it. |
 | `.github/workflows/ci.yml` | `vsce package` on every push and PR. |
-| `.github/workflows/release.yml` | Publishes to the Marketplace on a `v*` tag. |
+| `.github/workflows/release.yml` | Manual dispatch: bump, date the changelog, tag, GitHub release, publish. |
 
 ## Prerequisites
 
@@ -47,30 +47,48 @@ gh secret set VSCE_PAT --repo fvet/albuddy-pack
 
 ### Cutting a release
 
-1. Move everything under `## Unreleased` in `CHANGELOG.md` to a new
-   `## x.y.z - YYYY-MM-DD` section; leave a fresh empty `## Unreleased`.
-2. Bump and tag in one step:
-   ```bash
-   npm version <patch|minor|major>   # edits package.json, commits, tags vX.Y.Z
-   ```
-3. Push with the tag:
-   ```bash
-   git push --follow-tags
-   ```
-4. The **Release** workflow then:
-   - asserts the tag matches `package.json` (`vX.Y.Z` -> `X.Y.Z`),
-   - `vsce package` -> `albuddy-pack-vX.Y.Z.vsix`,
-   - `vsce publish` to the Marketplace using `VSCE_PAT`,
-   - creates a GitHub Release with generated notes and the `.vsix` attached.
-5. Confirm:
+Entries accumulate under `## Unreleased` in `CHANGELOG.md` as changes land,
+written for users. The release itself is one manual run - it does the version
+bump, the tag and the Marketplace push, so they cannot disagree.
+
+1. **Actions -> Release -> Run workflow** (on `main`). Pick `bump`
+   (`patch` / `minor` / `major`) or type an exact `version` to override it.
+   Leave `publish` on `publish`.
+2. The workflow then, in order:
+   - works out the next version and writes it into `package.json`,
+   - renames `## Unreleased` to `## X.Y.Z — YYYY-MM-DD`, opens a fresh empty
+     `## Unreleased`, and keeps the `[start:released]` marker between them (an
+     empty section becomes *"Maintenance release - nothing that changes what
+     you see"*),
+   - `vsce package` -> `albuddy-pack-X.Y.Z.vsix`, then checks the packaged
+     `package.json` really declares `X.Y.Z`,
+   - commits `package.json` + `CHANGELOG.md` as `Release vX.Y.Z`, tags
+     `vX.Y.Z`, pushes both to `main` atomically,
+   - creates the GitHub Release with that changelog section as the body and the
+     `.vsix` attached,
+   - `vsce publish` to the Marketplace using `VSCE_PAT`.
+3. Confirm:
    <https://marketplace.visualstudio.com/items?itemName=FredericVercaemst.albuddy-pack>
 
-### Dry run (no publish)
+The release commit is pushed straight to `main` with the default
+`GITHUB_TOKEN`. If `main` is later protected against direct pushes, add a write
+deploy key to the ruleset bypass list and check out with `ssh-key:` - this is
+how BC Buddy's release works.
 
-**Actions -> Release -> Run workflow**, tick **dry-run**. It packages and
-uploads the `.vsix` artifact, and skips `vsce publish` and the GitHub Release.
+### Rehearsing
+
+The `publish` input has two lighter settings:
+
+- **`package-only`** - bump, tag, push, and publish the GitHub Release, but do
+  not touch the Marketplace.
+- **`dry-run`** - build and version-check the `.vsix` only; nothing is
+  committed, tagged, or published. The `.vsix` is uploaded as a workflow
+  artifact to inspect.
 
 ### Manual publish (fallback)
+
+If Actions is unavailable, from a clean `main` with the version already set in
+`package.json` and the changelog closed off by hand:
 
 ```bash
 npx vsce login FredericVercaemst      # paste the PAT once

@@ -34,9 +34,11 @@ All work is in English: docs, comments, commit messages, build-script output.
 - **Icon**: edit `icons/logo.svg`, then `npm run build-icons`, then commit the
   regenerated PNGs. `package.json` ships `icons/icon128.png`. The mark is
   shared with AL Buddy for now.
-- **Versioning**: the Marketplace version follows the Git `v*` tag;
-  `release.yml` fails if the tag and `package.json` disagree. Release steps are
-  in `DEVELOPMENT.md`.
+- **Releasing**: the `Release` workflow is dispatched by hand. It bumps
+  `package.json`, dates the `## Unreleased` changelog section (keeping the
+  `[start:released]` marker), tags `vX.Y.Z`, cuts the GitHub release from that
+  section, and runs `vsce publish`. Never bump the version or tag by hand.
+  Steps are in `DEVELOPMENT.md`.
 
 ## Checks before a commit
 

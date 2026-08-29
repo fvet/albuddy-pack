@@ -1,12 +1,10 @@
 # AL Buddy Pack
 
 [![CI](https://github.com/fvet/albuddy-pack/actions/workflows/ci.yml/badge.svg)](https://github.com/fvet/albuddy-pack/actions/workflows/ci.yml)
-[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/FredericVercaemst.albuddy-pack)](https://marketplace.visualstudio.com/items?itemName=FredericVercaemst.albuddy-pack)
+[![VS Marketplace](https://img.shields.io/badge/VS_Marketplace-AL_Buddy_Pack-blue?logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=FredericVercaemst.albuddy-pack)
 [![License: MIT](https://img.shields.io/badge/License-MIT-informational.svg)](LICENSE)
 
-A curated Extension Pack for **AL / Microsoft Dynamics 365 Business Central**
-development. Companion to
-[AL Buddy](https://marketplace.visualstudio.com/items?itemName=FredericVercaemst.albuddy).
+A curated Extension Pack for **AL / Microsoft Dynamics 365 Business Central** development. 
 
 Installing this pack installs **every extension listed below** in one step.
 Don't want one of them? Uninstall it from the Extensions view - the pack won't

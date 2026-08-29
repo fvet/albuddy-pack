@@ -34,12 +34,19 @@
   },
   "extensionPack": [
     "ms-dynamics-smb.al",
+    "arthurvdv.alcops",
     "andrzejzwierzchowski.al-code-outline",
     "davidfeldhoff.al-codeactions",
+    "waldo.crs-al-language-extension",
     "vjeko.vjeko-al-objid",
     "teddyherryanto.al-pocket-tools",
-    "arthurvdv.alcops",
-    "waldo.crs-al-language-extension",
+    "rvanbekkum.xliff-sync",
+
+    "alexander-drogin.al-prettier-vscode",
+    "wbrakowski.al-navigator",
+    "DSaladin.al-companion",
+    "nabsolutions.nab-al-tools",
+    "jamespearson.al-test-runner",
 
     "chunsen.bracket-select",
     "natqe.reload",
@@ -47,24 +54,25 @@
     "wmaurer.change-case",
     "ryu1kn.partial-diff",
     "nwallace.createguid",
-
-    "alexander-drogin.al-prettier-vscode",
-    "rvanbekkum.xliff-sync",
+    "ms-vscode.powershell",
+    "clemenspeters.format-json",
 
     "vscode-icons-team.vscode-icons",
     "tyriar.sort-lines",
+    "albymor.increment-selection",
     "usernamehw.remove-empty-lines",
+    "yzhang.markdown-all-in-one",
+    "streetsidesoftware.code-spell-checker-dutch",
 
     "donjayamanne.githistory",
     "eamodio.gitlens",
-    "anthropic.claude-code",
     "github.vscode-pull-request-github",
-    "ms-vscode.powershell",
-    "streetsidesoftware.code-spell-checker-dutch",
-    "yzhang.markdown-all-in-one",
-    "albymor.increment-selection",
-    "clemenspeters.format-json",
-    "github.vscode-github-actions"
+    "github.vscode-github-actions",
+
+    "anthropic.claude-code",
+    "FernandoArtigasAlfonso.al-copilot-skills-collection",
+    "JavierArmestoGonzalez.al-development-collection",
+    "theframework.acdc"
   ],
   "scripts": {
     "build-icons": "powershell -ExecutionPolicy Bypass -File icons/build-icons.ps1"

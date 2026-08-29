@@ -9,8 +9,8 @@ plus the docs.
 | Path | What it is |
 | --- | --- |
 | `package.json` | `extensionPack` - the extensions the pack installs. The whole product. |
-| `README.md` | User-facing: the full install list as labelled tables. |
-| `cursor-extensions.md` | The curated inventory - source of truth for the pack. |
+| `README.md` | User-facing: the full install list as labelled tables, mirroring `extensionPack`. |
+| `backlog.md` | Unsized ideas + an **Extensions to review** table of candidates not yet bundled. |
 | `icons/logo.svg` | Brand mark (shared with AL Buddy). `build-icons.ps1` rasterises it. |
 | `.github/workflows/ci.yml` | `vsce package` on every push and PR. |
 | `.github/workflows/release.yml` | Publishes to the Marketplace on a `v*` tag. |
@@ -22,13 +22,14 @@ plus the docs.
 
 ## Changing what the pack installs
 
-1. Edit `cursor-extensions.md` - the inventory is the source of truth.
-2. Mirror the change into `extensionPack` in `package.json`, keeping the tier
-   order (MUST-AL, MUST-DEV, COULD-AL, COULD-DEV, OPTIONAL) and the blank-line
-   grouping.
-3. Mirror it into the `README.md` tables.
-4. Add a `## Unreleased` entry to `CHANGELOG.md` in the same commit.
-5. `npx --yes @vscode/vsce package` then `npx vsce ls` to eyeball the `.vsix`.
+1. Edit `extensionPack` in `package.json` - this array is the source of truth.
+   Keep the by-purpose grouping and the blank line between groups.
+2. Mirror the change into the `README.md` sections (same order, same grouping).
+3. Add a `## Unreleased` entry to `CHANGELOG.md` in the same commit.
+4. `npx --yes @vscode/vsce package` then `npx vsce ls` to eyeball the `.vsix`.
+
+An extension that was considered but not taken goes in the **Extensions to
+review** table in `backlog.md`, not the array.
 
 ## Publishing
 

@@ -10,8 +10,8 @@ the project aims to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.
 
 ### Added
 
-- First release. **AL Buddy Pack** installs a curated set of 28 AL / Business
-  Central and editor extensions in one step, ordered by the tiers in
-  `cursor-extensions.md` (AL essential, editor essential, AL extras, editor
-  extras, optional). Uninstall any individual member you don't want - the pack
-  does not reinstall it.
+- First release. **AL Buddy Pack** installs a curated set of 35 AL / Business
+  Central and general editor extensions in one step, grouped by purpose: AL
+  essentials, AL additional, editor essentials, editor additional, Git, and AI.
+  Uninstall any individual member you don't want - the pack does not reinstall
+  it.

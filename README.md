@@ -8,24 +8,37 @@ A curated Extension Pack for **AL / Microsoft Dynamics 365 Business Central**
 development. Companion to
 [AL Buddy](https://marketplace.visualstudio.com/items?itemName=FredericVercaemst.albuddy).
 
-Installing this pack installs **every extension listed below**. Don't want one
-of them? Uninstall it from the Extensions view - the pack won't put it back.
-The list mirrors the tiers in [cursor-extensions.md](cursor-extensions.md),
-which also records the versions each entry was last checked against.
+Installing this pack installs **every extension listed below** in one step.
+Don't want one of them? Uninstall it from the Extensions view - the pack won't
+put it back. Extensions still under consideration are in the
+[backlog](backlog.md).
 
-## AL - essential
+The sections below mirror the grouping in `package.json` `extensionPack`.
+
+## AL essentials
 
 | Extension | ID |
 | --- | --- |
 | AL Language (official Microsoft compiler + language server) | `ms-dynamics-smb.al` |
+| AlCops | `arthurvdv.alcops` |
 | AZ AL Dev Tools / Code Outline | `andrzejzwierzchowski.al-code-outline` |
 | AL Code Actions | `davidfeldhoff.al-codeactions` |
+| CRS AL Language Extension | `waldo.crs-al-language-extension` |
 | Object ID Ninja | `vjeko.vjeko-al-objid` |
 | AL Pocket Tools | `teddyherryanto.al-pocket-tools` |
-| AlCops | `arthurvdv.alcops` |
-| CRS AL Language Extension | `waldo.crs-al-language-extension` |
+| XLIFF Sync | `rvanbekkum.xliff-sync` |
 
-## Editor - essential
+## AL additional
+
+| Extension | ID |
+| --- | --- |
+| AL Prettier | `alexander-drogin.al-prettier-vscode` |
+| AL Navigator | `wbrakowski.al-navigator` |
+| AL Companion | `DSaladin.al-companion` |
+| NAB AL Tools | `nabsolutions.nab-al-tools` |
+| AL Test Runner | `jamespearson.al-test-runner` |
+
+## Editor essentials
 
 | Extension | ID |
 | --- | --- |
@@ -35,38 +48,37 @@ which also records the versions each entry was last checked against.
 | Change Case | `wmaurer.change-case` |
 | Partial Diff | `ryu1kn.partial-diff` |
 | Create GUID | `nwallace.createguid` |
+| PowerShell | `ms-vscode.powershell` |
+| Format JSON | `clemenspeters.format-json` |
 
-## AL - extras
-
-| Extension | ID |
-| --- | --- |
-| AL Prettier | `alexander-drogin.al-prettier-vscode` |
-| XLIFF Sync | `rvanbekkum.xliff-sync` |
-
-## Editor - extras
+## Editor additional
 
 | Extension | ID |
 | --- | --- |
 | vscode-icons | `vscode-icons-team.vscode-icons` |
 | Sort Lines | `tyriar.sort-lines` |
+| Increment Selection | `albymor.increment-selection` |
 | Remove Empty Lines | `usernamehw.remove-empty-lines` |
+| Markdown All in One | `yzhang.markdown-all-in-one` |
+| Code Spell Checker - Dutch | `streetsidesoftware.code-spell-checker-dutch` |
 
-## Optional
-
-Broader tooling and personal-taste picks. Uninstall any you don't use.
+## Git
 
 | Extension | ID |
 | --- | --- |
 | Git History | `donjayamanne.githistory` |
 | GitLens | `eamodio.gitlens` |
-| Claude Code | `anthropic.claude-code` |
 | GitHub Pull Requests | `github.vscode-pull-request-github` |
-| PowerShell | `ms-vscode.powershell` |
-| Code Spell Checker - Dutch | `streetsidesoftware.code-spell-checker-dutch` |
-| Markdown All in One | `yzhang.markdown-all-in-one` |
-| Increment Selection | `albymor.increment-selection` |
-| Format JSON | `clemenspeters.format-json` |
 | GitHub Actions | `github.vscode-github-actions` |
+
+## AI
+
+| Extension | ID |
+| --- | --- |
+| Claude Code | `anthropic.claude-code` |
+| AL Copilot Skills Collection | `FernandoArtigasAlfonso.al-copilot-skills-collection` |
+| AL Development Collection | `JavierArmestoGonzalez.al-development-collection` |
+| ACDC | `theframework.acdc` |
 
 ## Requirements
 

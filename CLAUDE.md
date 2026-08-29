@@ -17,19 +17,20 @@ All work is in English: docs, comments, commit messages, build-script output.
 
 ## Conventions
 
-- **`cursor-extensions.md` is the source of truth** for the curation. It is
-  grouped into tiers: MUST-AL, MUST-DEV, COULD-AL, COULD-DEV, OPTIONAL.
-- **`package.json` `extensionPack` mirrors that file**: same tier order, same
-  order within each tier. Blank lines in the array mark the tier boundaries -
-  keep them (they are valid JSON whitespace).
-- **`README.md` mirrors it too**, as labelled tables (AL essential, editor
-  essential, AL extras, editor extras, optional).
-- To add / remove / reorder an extension: edit `cursor-extensions.md` first,
-  then mirror the change into `package.json` `extensionPack` and the
-  `README.md` tables, plus a `CHANGELOG.md` entry under `## Unreleased` written
-  for users - all in one commit. CI / tooling work does not get a changelog
-  entry.
-- **`backlog.md`** holds unsized ideas. Move an item out when work starts.
+- **`package.json` `extensionPack` is the source of truth** for what the pack
+  installs. Entries are grouped by purpose - AL essentials, AL additional,
+  editor essentials, editor additional, Git, AI - with a blank line between
+  groups (valid JSON whitespace; keep it).
+- **`README.md` mirrors the array**: one `##` section per group, in the same
+  order, as `| Extension | ID |` tables.
+- To add / remove / reorder an extension: edit `package.json` `extensionPack`,
+  mirror it into the `README.md` sections, and add a `CHANGELOG.md` entry under
+  `## Unreleased` written for users - all in one commit. CI / tooling work does
+  not get a changelog entry.
+- **`backlog.md`** holds unsized ideas plus an **Extensions to review** table -
+  candidates considered but not (yet) in the pack. Move a row into
+  `extensionPack` + `README.md` when it makes the cut. Move an idea out when
+  work starts.
 - **Icon**: edit `icons/logo.svg`, then `npm run build-icons`, then commit the
   regenerated PNGs. `package.json` ships `icons/icon128.png`. The mark is
   shared with AL Buddy for now.

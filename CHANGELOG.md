@@ -13,6 +13,10 @@ the project aims to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+<!-- --8<-- [start:released] -->
+
+## 0.1.0 — 2026-08-29
+
 ### Added
 
 - First release. **AL Buddy Pack** installs a curated set of 35 AL / Business
@@ -20,5 +24,3 @@ the project aims to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.
   essentials, AL additional, editor essentials, editor additional, Git, and AI.
   Uninstall any individual member you don't want - the pack does not reinstall
   it.
-
-<!-- --8<-- [start:released] -->

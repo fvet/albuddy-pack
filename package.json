@@ -75,6 +75,7 @@
     "theframework.acdc"
   ],
   "scripts": {
-    "build-icons": "powershell -ExecutionPolicy Bypass -File icons/build-icons.ps1"
+    "build-icons": "powershell -ExecutionPolicy Bypass -File icons/build-icons.ps1",
+    "check": "node scripts/check-readme-sync.js"
   }
 }

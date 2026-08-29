@@ -1,5 +1,6 @@
 .github/**
 .vscode/**
+scripts/**
 .git/**
 .gitignore
 .gitattributes

@@ -12,7 +12,8 @@ plus the docs.
 | `README.md` | User-facing: the full install list as labelled tables, mirroring `extensionPack`. |
 | `backlog.md` | Unsized ideas + an **Extensions to review** table of candidates not yet bundled. |
 | `icons/logo.svg` | Brand mark (shared with AL Buddy). `build-icons.ps1` rasterises it. |
-| `.github/workflows/ci.yml` | `vsce package` on every push and PR. |
+| `scripts/check-readme-sync.js` | `npm run check` - fails if `README.md` and `extensionPack` drift. |
+| `.github/workflows/ci.yml` | `npm run check` + `vsce package` on every push and PR. |
 | `.github/workflows/release.yml` | Manual dispatch: bump, date the changelog, tag, GitHub release, publish. |
 
 ## Prerequisites
@@ -25,8 +26,10 @@ plus the docs.
 1. Edit `extensionPack` in `package.json` - this array is the source of truth.
    Keep the by-purpose grouping and the blank line between groups.
 2. Mirror the change into the `README.md` sections (same order, same grouping).
-3. Add a `## Unreleased` entry to `CHANGELOG.md` in the same commit.
-4. `npx --yes @vscode/vsce package` then `npx vsce ls` to eyeball the `.vsix`.
+3. `npm run check` - confirms the README and `extensionPack` still match
+   (same IDs, same order, same group sizes). CI runs this too.
+4. Add a `## Unreleased` entry to `CHANGELOG.md` in the same commit.
+5. `npx --yes @vscode/vsce package` then `npx vsce ls` to eyeball the `.vsix`.
 
 An extension that was considered but not taken goes in the **Extensions to
 review** table in `backlog.md`, not the array.

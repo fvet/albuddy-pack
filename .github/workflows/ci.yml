@@ -17,6 +17,10 @@ jobs:
         with:
           node-version: 22
 
+      # Fails the build if README.md and package.json `extensionPack` drift.
+      - name: Check README mirrors extensionPack
+        run: node scripts/check-readme-sync.js
+
       # Proves the .vsix packages cleanly - the same step the release runs.
       # An Extension Pack has no build or test; packaging is the only gate.
       - name: Package

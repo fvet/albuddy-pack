@@ -22,11 +22,16 @@ All work is in English: docs, comments, commit messages, build-script output.
   editor essentials, editor additional, Git, AI - with a blank line between
   groups (valid JSON whitespace; keep it).
 - **`README.md` mirrors the array**: one `##` section per group, in the same
-  order, as `| Extension | ID |` tables.
+  order, as `| Extension | Description |` tables. The linked extension name is
+  the mirror anchor (its Marketplace URL carries the ID); the description is a
+  short, verified summary of what the extension gives an AL/BC developer.
+  `scripts/check-readme-sync.js` (`npm run check`) enforces the mirror - same
+  IDs (read from each link's `itemName=`), same order, same group sizes - and
+  CI fails on drift.
 - To add / remove / reorder an extension: edit `package.json` `extensionPack`,
-  mirror it into the `README.md` sections, and add a `CHANGELOG.md` entry under
-  `## Unreleased` written for users - all in one commit. CI / tooling work does
-  not get a changelog entry.
+  mirror it into the `README.md` sections, run `npm run check`, and add a
+  `CHANGELOG.md` entry under `## Unreleased` written for users - all in one
+  commit. CI / tooling work does not get a changelog entry.
 - **`backlog.md`** holds unsized ideas plus an **Extensions to review** table -
   candidates considered but not (yet) in the pack. Move a row into
   `extensionPack` + `README.md` when it makes the cut. Move an idea out when
@@ -42,5 +47,6 @@ All work is in English: docs, comments, commit messages, build-script output.
 
 ## Checks before a commit
 
-`npx --yes @vscode/vsce package` must succeed - the same gate CI runs. There is
-no lint / type-check / test step.
+`npm run check` (README / `extensionPack` mirror) and
+`npx --yes @vscode/vsce package` must both succeed - the same gates CI runs.
+There is no lint / type-check / test step.

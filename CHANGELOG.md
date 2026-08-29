@@ -6,6 +6,11 @@ users: it is about what the pack installs. Tooling and CI work stays out of it.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 the project aims to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+<!-- Write entries for the next release under Unreleased as they land, in the
+     users' words. The Release workflow dates that section, opens a fresh one,
+     and uses it verbatim as the GitHub release notes. The marker line below
+     must stay put: released versions go beneath it, Unreleased above. -->
+
 ## Unreleased
 
 ### Added
@@ -15,3 +20,5 @@ the project aims to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.
   essentials, AL additional, editor essentials, editor additional, Git, and AI.
   Uninstall any individual member you don't want - the pack does not reinstall
   it.
+
+<!-- --8<-- [start:released] -->

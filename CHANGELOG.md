@@ -13,6 +13,10 @@ the project aims to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+### Removed
+
+- **AL Companion** (`DSaladin.al-companion`) is no longer part of the pack.
+
 <!-- --8<-- [start:released] -->
 
 ## 0.1.1 — 2026-08-29

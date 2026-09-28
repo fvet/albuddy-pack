@@ -35,7 +35,6 @@ The sections below mirror the grouping in `package.json` `extensionPack`.
 | --- | --- |
 | [AL Prettier](https://marketplace.visualstudio.com/items?itemName=alexander-drogin.al-prettier-vscode) | Opinionated AL formatter (Prettier plugin) for consistent indentation, line length, and variable grouping, with format-on-save and folder/workspace runs. |
 | [AL Navigator](https://marketplace.visualstudio.com/items?itemName=wbrakowski.al-navigator) | Generates variables and parameters with spec-compliant type sorting, jumps to var/key/dataitem sections by shortcut, and previews field translations on hover. |
-| [AL Companion](https://marketplace.visualstudio.com/items?itemName=DSaladin.al-companion) | Auto-loads dependency symbols and searches event subscribers and AL objects, fields, and procedures across every loaded app with fuzzy multi-token filters. |
 | [NAB AL Tools](https://marketplace.visualstudio.com/items?itemName=nabsolutions.nab-al-tools) | End-to-end XLIFF translation workflow (refresh, match, CSV import/export, state) plus tooltip and external doc generation from XML comments and permission-set generation. |
 | [AL Test Runner](https://marketplace.visualstudio.com/items?itemName=jamespearson.al-test-runner) | Runs and debugs AL tests from VS Code's Testing pane, highlights covered lines, and links each test to the methods it exercises. |
 
